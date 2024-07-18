@@ -14,4 +14,4 @@ def load_csv_to_postgres(csv_file_path, table_name, engine, schema):
     df = pd.read_csv(csv_file_path)
     df.to_sql(table_name, con=engine, if_exists='replace', index=False, schema=schema)
 
-    print('{len(df)} rows loaded to staging successfully')
+    print(f'{len(df)} rows loaded to staging successfully')
